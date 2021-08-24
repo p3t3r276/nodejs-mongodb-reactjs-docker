@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalBody, ModalHeader } from 'reactstrap';
-import { v4 } from 'uuid';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 
@@ -20,7 +19,6 @@ class ItemModal extends Component {
     e.preventDefault();
 
     const newItem = {
-      id: v4(),
       name: this.state.name
     }
 
