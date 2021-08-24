@@ -32,16 +32,5 @@ services:
     ports:
       - 8081:8081
 
-  app:
-    container_name: docker-node-mongo
-    build: ./server
-    restart: unless-stopped
-    environment:
-      WAIT_HOSTS: mongo:27017
-    depends_on: 
-      - mongo
-    ports:
-      - '5000:5000'
-
 volumes:
   mongodb-data:
